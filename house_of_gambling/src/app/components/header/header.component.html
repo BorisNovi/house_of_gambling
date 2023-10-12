@@ -1,1 +1,21 @@
-<p>header works!</p>
+<div class="container">
+  <div class="frame">
+    <nav class="nav-links">
+      <a href="#" class="nav-link">About us</a>
+      <a href="#" class="nav-link">Brands</a>
+      <a href="#" class="nav-link">Commissions</a>
+      <a href="#" class="nav-link">News</a>
+      <a href="#" class="nav-link">Contact us</a>
+      <a href="#" class="nav-link">Careers</a>
+    </nav>
+    <div class="user-buttons">
+      <button (click)="toggleLang()" class="language">
+        <img src="../../../assets/header-images/Icon - Planet.svg" alt="lang">
+        <span *ngIf="lang">EN</span>
+        <span *ngIf="!lang">RU</span>
+      </button>
+      <button class="log_in">LOG IN</button>
+      <button class="sign_up">SIGN UP</button>
+    </div>
+  </div>
+</div>

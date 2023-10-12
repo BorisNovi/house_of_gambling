@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Lexend';
+  src: url('assets/fonts/Lexend-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --main-blue: #478bf9;
+  --navy-blue: #110a1d;
+  --additional-purple: #9dadf2;
+}
+
+* {
+  font-family: 'Lexend', sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background-color: #110a1a;
+}
