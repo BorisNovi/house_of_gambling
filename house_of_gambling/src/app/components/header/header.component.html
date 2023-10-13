@@ -1,4 +1,5 @@
-<div class="container">
+<div [ngClass]="active" class="container">
+  <div class="hood"></div>
   <div class="frame">
     <div class="pseudo"></div>
     <nav class="nav-links">
@@ -8,12 +9,19 @@
       <a href="#" class="nav-link">News</a>
       <a href="#" class="nav-link">Contact us</a>
       <a href="#" class="nav-link">Careers</a>
+      <button class="nav-link log_in">LOG IN</button>
+      <button class="nav-link sign_up">SIGN UP</button>
     </nav>
     <div class="user-buttons">
       <button (click)="toggleLang()" class="language">
         <img src="../../../assets/header-images/Icon - Planet.svg" alt="lang">
         <span *ngIf="lang">EN</span>
         <span *ngIf="!lang">RU</span>
+      </button>
+      <button (click)="toggleMenu()" class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
       <button class="log_in">LOG IN</button>
       <button class="sign_up">SIGN UP</button>

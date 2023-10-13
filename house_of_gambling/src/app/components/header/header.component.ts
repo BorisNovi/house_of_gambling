@@ -7,8 +7,15 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   lang: boolean = false;
+  burger: boolean = false;
+  active: string = 'active';
 
   toggleLang() {
     this.lang = !this.lang;
+  }
+
+  toggleMenu() {
+    this.burger = !this.burger;
+    this.active = this.burger ? 'active' : '';
   }
 }

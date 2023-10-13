@@ -59,6 +59,131 @@
         border: none;
         background-color: var(--main-blue);
       }
+
+      .burger {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    .hood {
+      display: block;
+      z-index: -1;
+      height: 100vh;
+      width: 100vw;
+      position: fixed;
+      background-color: var(--navy-blue);
+      display: none;
+    }
+
+    .frame {
+      justify-content: flex-end;
+      border: 2px solid var(--main-blue);
+      width: 300px;
+      height: 56px;
+      padding: 0;
+
+      .pseudo {
+        display: none;
+      }
+
+      .nav-links {
+        transform: translateX(400px);
+        flex-direction: column;
+        gap: 5px;
+        position: fixed;
+        top: 110px;
+        transition: all 0.3s;
+
+        .nav-link {
+          width: 300px;
+          padding: 13px 20px;
+          border: 2px solid var(--main-blue);
+          border-radius: 64px;
+        }
+
+        .log_in {
+          margin: 30px 0 0 0;
+          background-color: var(--main--deep-blue);
+        }
+
+        .sign_up {
+          border: none;
+          background-color: var(--main-blue);
+        }
+      }
+
+      .user-buttons {
+        gap: 0;
+
+        .language {
+          padding: 8px;
+          border-radius: 50%;
+          height: auto;
+          width: auto;
+
+          span {
+            display: none;
+          }
+        }
+
+        .log_in,
+        .sign_up {
+          display: none;
+        }
+
+        .burger {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          border: none;
+          background-color: transparent;
+          height: 18px;
+          margin: 0 14px 0 8px;
+
+          span {
+            width: 20px;
+            border-bottom: 2px solid #fff;
+            transition: all 0.3s;
+          }
+        }
+      }
+    }
+  }
+}
+
+.active {
+  .hood {
+    display: block;
+  }
+
+  .frame {
+    position: fixed;
+    top: 16px;
+
+    .nav-links {
+      transform: translateX(0px);
+    }
+
+    .user-buttons {
+      .burger {
+        span:nth-child(1) {
+          transform: rotate(-45deg);
+          transform-origin: top right;
+        }
+
+        span:nth-child(2) {
+          display: none;
+        }
+
+        span:nth-child(3) {
+          transform: rotate(45deg);
+          transform-origin: bottom right;
+        }
+      }
     }
   }
 }
