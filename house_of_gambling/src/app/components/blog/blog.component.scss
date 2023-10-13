@@ -1,3 +1,15 @@
+.background {
+  z-index: -1;
+  //background: radial-gradient(circle, rgba(71,139,249,1) 0%, rgba(0,0,0,0.2) 60%);
+  background-color: var(--main-blue);
+  transform: translate(280px, 450px) rotate(60deg) scaleX(1.5);
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: absolute;
+  filter: blur(115px);
+}
+
 .container {
   width: 530px;
   display: flex;

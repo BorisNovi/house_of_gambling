@@ -6,8 +6,8 @@
   height: 100vh;
   overflow: hidden;
   gap: 10px;
-  z-index: -10;
-  box-shadow: 0 -120px 70px -25px rgba(0,0,0,1) inset;
+  position: relative;
+  z-index: -3;
 
   .line_1 {
     display: flex;
@@ -32,7 +32,7 @@
     flex-direction: column;
     gap: 20px;
     animation: move 50s linear infinite reverse;
-    opacity: 60%;
+    opacity: 50%;
 
     .icon {
       width: 100px;
