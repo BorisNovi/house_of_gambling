@@ -13,7 +13,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    animation: move 60s linear infinite;
+    animation: moveY 60s linear infinite;
     opacity: 20%;
 
     .icon {
@@ -24,6 +24,14 @@
     .icon__long {
       width: 100px;
       height: 220px;
+
+      &--Y {
+        display: initial;
+      }
+
+      &--X {
+        display: none;
+      }
     }
   }
 
@@ -31,7 +39,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    animation: move 50s linear infinite reverse;
+    animation: moveY 50s linear infinite reverse;
     opacity: 50%;
 
     .icon {
@@ -42,6 +50,14 @@
     .icon__long {
       width: 100px;
       height: 220px;
+
+      &--Y {
+        display: initial;
+      }
+
+      &--X {
+        display: none;
+      }
     }
   }
 
@@ -49,7 +65,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    animation: move 65s linear infinite;
+    animation: moveY 65s linear infinite;
     opacity: 40%;
 
     .icon {
@@ -60,11 +76,19 @@
     .icon__long {
       width: 100px;
       height: 220px;
+
+      &--Y {
+        display: initial;
+      }
+
+      &--X {
+        display: none;
+      }
     }
   }
 }
 
-@keyframes move {
+@keyframes moveY {
   0% {
     transform: translateY(0%);
   }
@@ -84,4 +108,73 @@
   100% {
     transform: translateY(0%);
   }
+}
+
+@keyframes moveX {
+  0% {
+    transform: translateX(0%);
+  }
+
+  25% {
+    transform: translateX(-25%);
+  }
+
+  50% {
+    transform: translateX(0%);
+  }
+
+  75% {
+    transform: translateX(25%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+
+@media screen and (max-width: 425px){
+  .container {
+    width: 100vw;
+    height: initial;
+    flex-direction: column;
+    gap: 8px;
+
+    .line_1,
+    .line_2,
+    .line_3 {
+      flex-direction: row;
+      gap: 14px;
+
+      .icon,
+      .icon img {
+        width: 50px;
+        height: 50px;
+      }
+
+      .icon__long {
+        &--Y {
+          display: none;
+        }
+
+        &--X {
+          display: initial;
+        }
+      }
+    }
+
+    .line_1 {
+      animation: moveX 65s linear infinite;
+    }
+
+    .line_2 {
+      animation: moveX 50s linear infinite reverse;
+    }
+
+    .line_3 {
+      animation: moveX 65s linear infinite;
+    }
+  }
+
+
 }
