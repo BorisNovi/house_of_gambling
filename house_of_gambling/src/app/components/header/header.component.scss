@@ -4,7 +4,6 @@
   align-items: center;
 
   .frame {
-    box-sizing: border-box;
     width: 90%;
     display: flex;
     justify-content: space-between;
@@ -55,13 +54,8 @@
         background-color: transparent;
       }
 
-      .sign_up  {
-        border: none;
-      }
-
-      .log_in {}
-
       .sign_up {
+        border: none;
         background-color: var(--main-blue);
       }
     }
