@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
   lang: boolean = false;
   burger: boolean = false;
-  active: string = 'active';
+  active: string = '';
 
   toggleLang() {
     this.lang = !this.lang;
@@ -17,5 +17,9 @@ export class HeaderComponent {
   toggleMenu() {
     this.burger = !this.burger;
     this.active = this.burger ? 'active' : '';
+
+    const body = document.querySelector('body');
+
+    this.burger ? body!.style.overflow = 'hidden' : body!.style.overflow = '';
   }
 }

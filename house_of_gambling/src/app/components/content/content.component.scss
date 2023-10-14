@@ -57,12 +57,38 @@
   }
 }
 
-@media screen and (max-width: 425px){
-  .container {
-    display: none;
-  }
-
+@media screen and (max-width: 425px) {
   .background {
     display: none;
   }
+
+  .container {
+    align-items: center;
+
+    .heading {
+      h1 {
+        font-size: 46px;
+        line-height: 50px;
+        text-align: center;
+      }
+
+      span {}
+
+      h2 {
+        font-size: 20px;
+        line-height: 26px;
+        text-align: center;
+      }
+    }
+
+    .link-container {
+      a {
+        width: 300px;
+        padding: 10px 20px;
+        font-size: 18px;
+      }
+    }
+  }
+
+
 }
