@@ -34,7 +34,7 @@
     .blog-container {
       display: flex;
       flex-direction: column;
-      padding: 24px 24px 24px 24px;
+      padding: 24px;
       height: 600px;
       overflow-y: scroll;
       border-radius: 100px;
@@ -99,10 +99,54 @@
 
 @media screen and (max-width: 425px){
   .container {
-    display: none;
+    width: 300px;
+    h2 {
+      line-height: 30px;
+    }
+
+    .outer-container {
+      height: 420px;
+      border: 2px solid var(--main-blue);
+      border-radius: 50px;
+      padding: 0 4px 0 0;
+      .blog-container {
+        height: 416px;
+        padding: 10px;
+        border-radius: 47px;
+        .blog-item {
+          border-radius: 40px;
+          padding: 15px 35px;
+          width: 274px;
+
+          &--header {
+            font-size: 16px;
+            line-height: 20px;
+          }
+
+          &--date {
+            font-size: 14px;
+            line-height: 16px;
+            margin: 10px 0 0;
+          }
+        }
+      }
+
+      .blog-container::-webkit-scrollbar-track {
+        margin: 50px 0;
+      }
+
+      .blog-container::-webkit-scrollbar {
+        width: 4px;
+      }
+    }
   }
 
   .background {
-    display: none;
+    transform: translate(220px, 450px);
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    position: absolute;
+    filter: blur(70px);
   }
 }

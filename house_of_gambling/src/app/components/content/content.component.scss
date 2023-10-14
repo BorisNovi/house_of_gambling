@@ -59,7 +59,15 @@
 
 @media screen and (max-width: 425px) {
   .background {
-    display: none;
+    top: 50px;
+    right: 170px;
+    background: rgba(71, 139, 249, 0.4);
+    transform: rotate(130deg);
+    border-radius: 50%;
+    height: 420px;
+    width: 60px;
+    position: absolute;
+    filter: blur(40px);
   }
 
   .container {
@@ -71,8 +79,6 @@
         line-height: 50px;
         text-align: center;
       }
-
-      span {}
 
       h2 {
         font-size: 20px;
@@ -89,6 +95,4 @@
       }
     }
   }
-
-
 }
